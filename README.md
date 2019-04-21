@@ -4,7 +4,7 @@ Dash Upload Components is a Dash component library.
 
 Get started with:
 1. Install Dash and its dependencies: https://dash.plot.ly/installation
-2. Run `python usage.py`
+2. Run `python usage.py` (TODO)
 3. Visit http://localhost:8050 in your web browser
 
 ## Contributing
@@ -58,22 +58,29 @@ If you have selected install_dependencies during the prompt, you can skip this p
 
 ### Create a production build and publish:
 
-1. Build your code:
+The commands are executed from the root folder.
+
+1. Install dependencies
+```bash
+$ npm install
+```
+
+2. Build your code:
     ```
     $ npm run build:all
     ```
-2. Create a Python tarball
+3. Create a Python tarball
     ```
     $ python setup.py sdist
     ```
     This distribution tarball will get generated in the `dist/` folder
 
-3. Test your tarball by copying it into a new environment and installing it locally:
+4. Test your tarball by copying it into a new environment and installing it locally:
     ```
     $ pip install dash_upload_components-0.0.1.tar.gz
     ```
 
-4. If it works, then you can publish the component to NPM and PyPI:
+5. If it works, then you can publish the component to NPM and PyPI:
     1. Cleanup the dist folder (optional)
         ```
         $ rm -rf dist
@@ -87,7 +94,7 @@ If you have selected install_dependencies during the prompt, you can skip this p
         $ npm publish
         ```
         _Publishing your component to NPM will make the JavaScript bundles available on the unpkg CDN. By default, Dash servers the component library's CSS and JS from the remote unpkg CDN, so if you haven't published the component package to NPM you'll need to set the `serve_locally` flags to `True` (unless you choose `False` on `publish_on_npm`). We will eventually make `serve_locally=True` the default, [follow our progress in this issue](https://github.com/plotly/dash/issues/284)._
-5. Share your component with the community! https://community.plot.ly/c/dash
+6. Share your component with the community! https://community.plot.ly/c/dash
     1. Publish this repository to GitHub
     2. Tag your GitHub repository with the plotly-dash tag so that it appears here: https://github.com/topics/plotly-dash
     3. Create a post in the Dash community forum: https://community.plot.ly/c/dash
