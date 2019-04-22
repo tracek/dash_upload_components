@@ -1,7 +1,7 @@
 {
   "name": "dash_upload_components",
-  "version": "0.0.1",
-  "description": "Upload large files to Dash",
+  "version": "0.0.2",
+  "description": "Upload large files to Dash (based on https://github.com/rmarren1/dash-resumable-upload)",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",

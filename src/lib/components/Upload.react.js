@@ -84,7 +84,7 @@ export default class Upload extends Component {
             this.setState({
                 fileList: {files: currentFiles},
                 isComplete: true,
-                messageStatus: this.props.completedMessage + file.fileName || fileServer
+                messageStatus: this.props.completedMessage
             }, () => {
                 if (typeof this.props.onFileSuccess === 'function') {
                     this.props.onFileSuccess(file, fileServer);
